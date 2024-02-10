@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main()
+{
+    int limit, i, j, arrayNr[50];
+
+    scanf("%d", &limit);
+
+    for (i = 0; i < limit; i++)
+    {
+        scanf("%d", &arrayNr[i]);
+    }
+
+    printf("The unique elements found in the array are: \n");
+
+    for (i = 0; i < limit; i++)
+    {
+        int isUnique = 1;
+
+        for (j = i + 1; j < limit; j++)
+        {
+            if (arrayNr[i] == arrayNr[j])
+            {
+                isUnique = 0;
+                break;
+            }
+        }
+
+        for (j = 0; j < i; j++)
+        {
+            if (arrayNr[i] == arrayNr[j])
+            {
+                isUnique = 0;
+                break;
+            }
+        }
+
+        if (isUnique)
+        {
+            printf("%d ", arrayNr[i]);
+        }
+    }
+
+    printf("\n");
+
+    return 0;
+}

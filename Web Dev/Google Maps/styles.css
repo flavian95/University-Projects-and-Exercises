@@ -1,0 +1,8 @@
+body{
+    height: 100vh;
+}
+
+.map{
+    width: 800px;
+    height: 500px;
+}

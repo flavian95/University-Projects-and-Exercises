@@ -1,0 +1,36 @@
+
+*{
+    font-size: 62.5%;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5rem;
+}
+
+.header{
+   font-size: 4rem;
+   margin-bottom: 2rem;
+}
+
+.to-do-list{
+   display: flex;
+   justify-content: center;
+   gap: 1rem;
+}
+
+.to-do-font{
+   font-size: 2.5rem;
+}
+
+.to-do-input,
+.to-do-btn{
+   padding: 1rem;
+   border-radius: 3px;
+}
+
+.to-do-btn{
+   cursor: pointer ;
+}
