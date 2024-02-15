@@ -29,32 +29,76 @@ function updateCount() {
     });
 }
 
-btn.addEventListener("click", () => {
-    if (input.value.length > 1 && input.value.length < 40) {
-        const capitalizedValue = capitalizeFirstLetter(input.value);
+const addedValues = new Set();
+
+function handleButtonClick() {
+    const trimmedValue = input.value.trim();
+    
+    if (trimmedValue.length > 2 && trimmedValue.length < 40) {
+        if (addedValues.has(trimmedValue)) {
+            showMessage("This value is already added.");
+            return; 
+        }
+
+        const capitalizedValue = capitalizeFirstLetter(trimmedValue);
 
         countNr++;
 
-        const newElement = `<div class="to-do-subcontainer">
-        <div class="to-do-body">
-           <p class="to-do-count">${countNr}</p>
-           <h4 class="to-do-act">${capitalizedValue}</h4>
-        </div>
-        <div class="to-do-done">
-          <button class="done-btn btn">Done</button>
-          <img class="to-do-icon" src="../icons/done.png" alt="Done">
-        </div>
-      </div>`;
+        const subContainer = document.createElement('div');
+        subContainer.classList.add('to-do-subcontainer');
 
-        container.insertAdjacentHTML('beforeend', newElement);
+        const bodyDiv = document.createElement('div');
+        bodyDiv.classList.add('to-do-body');
+
+        const countParagraph = document.createElement('p');
+        countParagraph.classList.add('to-do-count');
+        countParagraph.textContent = countNr;
+
+        const actHeading = document.createElement('h4');
+        actHeading.classList.add('to-do-act');
+        actHeading.textContent = capitalizedValue;
+
+        const doneDiv = document.createElement('div');
+        doneDiv.classList.add('to-do-done');
+
+        const doneBtn = document.createElement('button');
+        doneBtn.classList.add('done-btn', 'btn');
+        doneBtn.textContent = 'Done';
+
+        const doneImg = document.createElement('img');
+        doneImg.classList.add('to-do-icon');
+        doneImg.src = '../icons/done.png';
+        doneImg.alt = 'Done';
+
+        bodyDiv.appendChild(countParagraph);
+        bodyDiv.appendChild(actHeading);
+
+        doneDiv.appendChild(doneBtn);
+        doneDiv.appendChild(doneImg);
+
+        subContainer.appendChild(bodyDiv);
+        subContainer.appendChild(doneDiv);
+
+        container.appendChild(subContainer);
+
+        addedValues.add(trimmedValue);
 
         updateCount();
-    }
-
-    else{
+    } else {
         showMessage("Invalid Input");
     }
+}
+
+
+btn.addEventListener("click", handleButtonClick);
+
+input.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        handleButtonClick();
+    }
 });
+
 
 container.addEventListener("click", (event) => {
     const doneBtn = event.target.closest(".done-btn");
@@ -87,4 +131,3 @@ clear.addEventListener("click", () => {
 
     countNr = 0;
 });
-
