@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Convertor</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="currencyConvertor.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="flex header-container">
+        <h1 class="header">Currency Convertor</h1>
+      </div>
+      <div class="form-container">
+        <div class="input-container flex">
+          <input
+            class="currency-input"
+            type="number"
+            placeholder="Insert a number"
+          />
+        </div>
+        <form class="form flex">
+          <select class="selectCurrency currencyFrom">
+            <option class="currencyOptions" value="USD">USD</option>
+            <option class="currencyOptions" value="EUR">EUR</option>
+            <option class="currencyOptions" value="GBP">GBP</option>
+            <option class="currencyOptions" value="RON">RON</option>
+          </select>
+          <label class="label-currency">To</label>
+          <select class="selectCurrency currencyTo">
+            <option class="currencyOptions" value="EUR">EUR</option>
+            <option class="currencyOptions" value="USD">USD</option>
+            <option class="currencyOptions" value="GBP">GBP</option>
+            <option class="currencyOptions" value="RON">RON</option>
+          </select>
+          <button class="submitBtn" type="submit">Submit</button>
+        </form>
+      </div>
+      <!-- <div class="result-container flex">
+                <p class="result">1.1 USD is 1 EUR</p>
+            </div> -->
+    </div>
+  </body>
+</html>
