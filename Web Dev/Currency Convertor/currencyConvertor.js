@@ -3,6 +3,7 @@ const currencyFrom = document.querySelector(".currencyFrom");
 const currencyTo = document.querySelector(".currencyTo");
 const btn = document.querySelector(".submitBtn");
 const container = document.querySelector(".container");
+const apiKey = 'P42eovKdpd5UCSobgMmTjDejugvQJx7m';
 
 const exchangeRates = {
     "USD_EUR": 1.08,
