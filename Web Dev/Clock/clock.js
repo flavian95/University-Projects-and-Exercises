@@ -30,7 +30,7 @@ function updateTime() {
     }
 
     if (timeZone === "West USA") {
-        timeZoneOffset = -9;
+        timeZoneOffset = -8;
     }
 
     hours += timeZoneOffset;
