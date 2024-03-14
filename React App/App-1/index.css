@@ -1,0 +1,104 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.div-container{
+  display: flex;
+  justify-content: center;
+}
+
+.container{
+  width: 500px;
+}
+
+.main-container{
+  background: #eaeaeacc;
+}
+
+.header-container{
+   background: rgb(21, 152, 21);
+   display: flex;
+   justify-content: center;
+   padding: 1.8rem 0;
+}
+
+.header{
+  color: white;
+  font-size: 4rem;
+}
+
+.balance-text{
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.balance-amount{
+   font-size: 4.5rem;
+}
+
+.budget-container{
+  margin: 2rem 0 2rem 1rem;
+}
+
+.income-container{
+  background: white;
+  display: flex;
+  justify-content: center;
+}
+
+.income-text{
+   font-size: 2rem;
+}
+
+.track-container{
+  display: flex;
+  justify-self: center;
+  flex-direction: column;
+  width: max-content;
+}
+
+.track-text{
+   font-size: 2rem;
+   text-transform: uppercase;
+   font-weight: 600;
+}
+
+.track-amount{
+   font-size: 2.3rem;
+}
+
+.income{
+   color: rgb(21, 152, 21);
+}
+
+.expense{
+   color: rgb(220, 17, 17);
+}
+
+.track-main-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #fff;
+  border-radius: 5px;
+  margin-bottom: 3rem;
+  padding: 2rem;
+}
+
+.track-wrapper{
+  position: relative;
+}
+
+.track-main-container::before {
+  content: '';
+  position: absolute;
+  width: 1px; 
+  background-color: #eaeaeacc; 
+  top: 0;
+  bottom: 0;
+  left: calc(50%); 
+  margin: 2rem 0;
+}
