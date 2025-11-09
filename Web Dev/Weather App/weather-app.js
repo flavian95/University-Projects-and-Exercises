@@ -2,7 +2,7 @@
 const weatherForm = document.querySelector(".weatherForm");
 const cityInput = document.querySelector(".cityInput");
 const card = document.querySelector(".card");
-const apiKey = 'd2be7a814dcbaf1b0473d23ae5f79eb3';
+const apiKey = '#';
 
 weatherForm.addEventListener("submit", async event =>{
   event.preventDefault();
@@ -90,4 +90,5 @@ function displayError(message){
     card.textContent = '';
     card.style.display = "flex";
     card.appendChild(errorDisplay);
+
 }
