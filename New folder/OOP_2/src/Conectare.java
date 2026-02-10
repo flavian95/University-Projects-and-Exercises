@@ -8,7 +8,7 @@ public class Conectare {//aplicam m.p. Singleton
     private Conectare(){
 
         try{
-            c=DriverManager.getConnection("jdbc:mysql://localhost:3306/angajatibd", "root", "");
+            c=DriverManager.getConnection("jdbc:#", "#", "");
             stmt=c.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);//modificam datele unei db
 
         }catch(SQLException e){System.out.println("exceptie din conexiune"+e.getMessage());}
@@ -33,5 +33,6 @@ public class Conectare {//aplicam m.p. Singleton
         if(instanta==null) instanta=new Conectare();
         return instanta;
     }
+
 
 }
