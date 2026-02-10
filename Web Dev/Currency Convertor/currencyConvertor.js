@@ -3,7 +3,7 @@ const currencyFrom = document.querySelector(".currencyFrom");
 const currencyTo = document.querySelector(".currencyTo");
 const btn = document.querySelector(".submitBtn");
 const container = document.querySelector(".container");
-const apiKey = 'P42eovKdpd5UCSobgMmTjDejugvQJx7m';
+const apiKey = '#';
 
 const exchangeRates = {
     "USD_EUR": 1.08,
@@ -83,4 +83,5 @@ function result(exchangeValue) {
     else {
         resultText.textContent = `${input.value} ${currencyFrom.value} is ${exchangeValue} ${currencyTo.value}`;
     }
+
 }
