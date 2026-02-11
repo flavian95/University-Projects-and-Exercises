@@ -1,4 +1,4 @@
-🎓 College Projects & Exercises (Portfolio)
+🎓 University Projects & Exercises (Portfolio)
 
 Welcome to Main, a central repository hosting the bulk of my university work throughout my Computer Science degree, along with assorted programming exercises and web development practice. This is a portfolio-style repository that showcases the growth of my skills, the variety of problems I’ve tackled, and the technologies I’ve learned along the way.
 
